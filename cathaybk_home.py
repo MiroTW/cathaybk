@@ -45,17 +45,17 @@ class cathaybk(unittest.TestCase):
     #         window_after = self.driver.window_handles[1]
     #         self.driver.switch_to.window(window_after)
     #     self.assertEqual(self.driver.current_url, 'https://www.cathaybk.com.tw/cathaybk/csr/index.html')
-    # def test_007(self):
-    #     SiteMenuLink = self.driver.find_elements_by_id('lnk_pc-megamenu_SiteMenuLink')
-    #     SiteMenuLink[4].click()
-    #     for handle in self.driver.window_handles:
-    #         window_after = self.driver.window_handles[1]
-    #         self.driver.switch_to.window(window_after)
-    #     self.assertEqual(self.driver.current_url, 'https://recruit.cathaybk.com.tw/CathaybkHR/servlet/HttpDispatcher/EZA0_0000/index')
-    # def test_008(self):
-    #     SiteMenuLink = self.driver.find_elements_by_id('lnk_pc-megamenu_SiteMenuLink')
-    #     SiteMenuLink[5].click()
-    #     self.assertEqual(self.driver.current_url, 'https://www.cathaybk.com.tw/en-us/cathaybk/english/about-us/about-us/company-history/')
+    def test_007(self):
+        SiteMenuLink = self.driver.find_elements_by_id('lnk_pc-megamenu_SiteMenuLink')
+        SiteMenuLink[4].click()
+        for handle in self.driver.window_handles:
+            window_after = self.driver.window_handles[1]
+            self.driver.switch_to.window(window_after)
+        self.assertEqual(self.driver.current_url, 'https://recruit.cathaybk.com.tw/CathaybkHR/servlet/HttpDispatcher/EZA0_0000/index')
+    def test_008(self):
+        SiteMenuLink = self.driver.find_elements_by_id('lnk_pc-megamenu_SiteMenuLink')
+        SiteMenuLink[5].click()
+        self.assertEqual(self.driver.current_url, 'https://www.cathaybk.com.tw/en-us/cathaybk/english/about-us/about-us/company-history/')
 
     #LV01MenuLink
     def test_009(self):
